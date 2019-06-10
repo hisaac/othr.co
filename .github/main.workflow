@@ -4,8 +4,8 @@ workflow "Deploy to AWS S3" {
 }
 
 action "Deploy to S3" {
-  uses = "actions/aws/cli@efb074ae4510f2d12c7801e4461b65bf5e8317e6"
+  uses = "actions/aws/cli@master"
   runs = "sync"
-  args = "[./, S3_URI]"
-  secrets = ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "S3_URI"]
+  args = "./ s3://level.software --dryrun"
+  secrets = ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]
 }
