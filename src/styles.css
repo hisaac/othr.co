@@ -1,0 +1,79 @@
+:root {
+	--color-background: inherit;
+	--color-link: rgb(50, 50, 235);
+	--color-horizontal-rule: rgb(208, 215, 222);
+	--color-text: inherit;
+
+	--color-gold: #e3bf14;
+	--color-turquoise: #00c0c2;
+	--color-maroon: #cc2044;
+	--color-rose: #e56bbe;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: rgb(20, 20, 20);
+		--color-link: rgb(47, 129, 247);
+		--color-horizontal-rule: rgb(48, 54, 61);
+		--color-text: rgb(221, 221, 221);
+	}
+}
+
+body {
+	background-color: var(--color-background);
+	color: var(--color-text);
+	margin: auto;
+	max-width: 400px;
+	padding: 1em;
+	font-size: 1.3em;
+}
+
+h1,
+h2 {
+	margin: 0;
+	font-weight: normal;
+}
+
+header {
+	margin-top: 1em;
+}
+
+header,
+main,
+footer {
+	padding-left: .3em;
+	padding-right: .3em;
+}
+
+a {
+	color: var(--color-link);
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid var(--color-horizontal-rule);
+	margin: 1em 0;
+}
+
+.o,
+.t,
+.h,
+.r {
+	font-weight: bold;
+}
+
+.o {
+	color: var(--color-gold);
+}
+
+.t {
+	color: var(--color-turquoise);
+}
+
+.h {
+	color: var(--color-maroon);
+}
+
+.r {
+	color: var(--color-rose);
+}
